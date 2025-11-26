@@ -18,7 +18,7 @@ public class EmployeeNew {
         this.salary = salary;
         this.jobTitle = jobTitle;
         this.division = division;
-        this.payHistory = payHistory;
+        this.email = email;
     }
 
     public int getEmpid() {
@@ -72,4 +72,5 @@ public class EmployeeNew {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
