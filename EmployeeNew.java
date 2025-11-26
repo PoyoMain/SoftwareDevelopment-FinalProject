@@ -8,17 +8,17 @@ public class EmployeeNew {
     private double salary;
     private String jobTitle;
     private String division;
-    private String email;
+    private List<PayStatement> payHistory;
 
 
-    public EmployeeNew(int empid, String name, String SSN, double salary, String jobTitle, String division, String email){
+    public EmployeeNew(int empid, String name, String SSN, double salary, String jobTitle, String division, List<PayStatement> payHistory){
         this.empid = empid;
         this.name = name;
         this.SSN = SSN;
         this.salary = salary;
         this.jobTitle = jobTitle;
         this.division = division;
-        this.email = email;
+        this.payHistory = payHistory;
     }
 
     public int getEmpid() {
@@ -45,8 +45,8 @@ public class EmployeeNew {
         return division;
     }
 
-    public String getEmail() {
-        return email;
+    public List<PayStatement> getPayHistory() {
+        return payHistory;
     }
 
     public void setSalary(double salary) {
@@ -69,8 +69,9 @@ public class EmployeeNew {
         this.division = division;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void addPayStatement(PayStatement payStatement) {
+        this.payHistory.add(payStatement);
     }
 
 }
+
