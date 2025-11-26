@@ -1,26 +1,28 @@
+import java.util.List;
+
 public class EmployeeRepository implements IEmployeeRepository 
 {
-    List<Employee> employees;
+    List<EmployeeNew> employees;
 
     @Override
-    public List<Employee> getAllEmployees() {
+    public List<EmployeeNew> getAllEmployees() {
         return employees;
     }
 
     @Override
-    public Employee searchEmployee(String criteria) {
+    public EmployeeNew searchEmployee(String criteria) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'searchEmployee'");
     }
 
     @Override
-    public void updateEmployee(Employee employee) {
+    public void updateEmployee(EmployeeNew employee) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'updateEmployee'");
     }
 
     @Override
-    public void addEmployee(Employee employee) {
+    public void addEmployee(EmployeeNew employee) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'addEmployee'");
     }
