@@ -8,10 +8,10 @@ public class EmployeeNew {
     private double salary;
     private String jobTitle;
     private String division;
-    private List<PayStatement> payHistory;
+    private List<PayStatementNew> payHistory;
 
 
-    public EmployeeNew(int empid, String name, String SSN, double salary, String jobTitle, String division, List<PayStatement> payHistory){
+    public EmployeeNew(int empid, String name, String SSN, double salary, String jobTitle, String division, List<PayStatementNew> payHistory){
         this.empid = empid;
         this.name = name;
         this.SSN = SSN;
@@ -45,7 +45,7 @@ public class EmployeeNew {
         return division;
     }
 
-    public List<PayStatement> getPayHistory() {
+    public List<PayStatementNew> getPayHistory() {
         return payHistory;
     }
 
@@ -69,9 +69,10 @@ public class EmployeeNew {
         this.division = division;
     }
 
-    public void addPayStatement(PayStatement payStatement) {
+    public void addPayStatement(PayStatementNew payStatement) {
         this.payHistory.add(payStatement);
     }
 
 }
+
 
