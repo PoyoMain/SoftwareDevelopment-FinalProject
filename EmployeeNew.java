@@ -49,6 +49,10 @@ public class EmployeeNew {
         return payHistory;
     }
 
+    public void setEmpid(int empid) {
+        this.empid = empid;
+    }
+    
     public void setSalary(double salary) {
         this.salary = salary;
     }
@@ -74,5 +78,6 @@ public class EmployeeNew {
     }
 
 }
+
 
 
