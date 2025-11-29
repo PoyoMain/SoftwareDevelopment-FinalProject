@@ -32,9 +32,7 @@ public class Main {
 
             switch (choice) {
 
-                // =========================================================
-                // 1) ADD EMPLOYEE
-                // =========================================================
+                //First case that adds the employee
                 case 1:
                     boolean validID = false;
                     boolean validSalary = false;
@@ -78,9 +76,7 @@ public class Main {
                     service.addEmployee(emp);
                     break;
 
-                // =========================================================
-                // 2) DELETE EMPLOYEE
-                // =========================================================
+                //Second case that deletes employee
                 case 2: {
                     Employee found = null;
 
@@ -112,9 +108,7 @@ public class Main {
 
 
 
-                // =========================================================
-                // 3) DISPLAY ALL EMPLOYEES
-                // =========================================================
+                //Third case that displays all the employees with their info to the user
                 case 3:
                     List<Employee> all = service.getAllEmployees();
 
@@ -129,9 +123,7 @@ public class Main {
                     }
                     break;
 
-                // =========================================================
-                // 4) INCREASE SALARY BY RANGE
-                // =========================================================
+                //Increases the salaries of all the employees within a range by a percentage
                 case 4:
                    double min = 0, max = 0, pct = 0;
                    boolean valid = false;
@@ -184,9 +176,7 @@ public class Main {
                    break;
 
 
-                // =========================================================
-                // 5) SEARCH EMPLOYEE
-                // =========================================================
+                //Searches for an employee
                 case 5:
                     int opt = -1;
                     valid = false;
@@ -225,9 +215,7 @@ public class Main {
                     break;
 
 
-                // =========================================================
-                // 6) UPDATE EMPLOYEE DATA (name + job + division)
-                // =========================================================
+                //Updates employee data (Name, jobtitle, and/or division)
                 case 6:
                     System.out.println("Update using: 1=Name  2=ID  3=SSN");
 
@@ -267,7 +255,7 @@ public class Main {
                         criteria = scanner.nextLine();
                     }
 
-                    // 💡 Only ONE search method is used here!
+                    
                     Employee target = service.searchEmployee(criteria);
 
                     if (target == null) {
@@ -294,9 +282,7 @@ public class Main {
                     break;
 
 
-                // =========================================================
-                // 7) EXIT
-                // =========================================================
+                //Exits out of the program
                 case 7:
                     System.out.println("Goodbye!");
                     return;
@@ -308,9 +294,7 @@ public class Main {
         }
     }
 
-    // =========================================================
-    // Helper Method to Print Employee Info
-    // =========================================================
+    //Method that displays all of the employee information
     private static void printEmployee(Employee e) {
     System.out.println(
         "ID: " + e.getEmpid() +
@@ -323,3 +307,4 @@ public class Main {
     }
 
 }
+
