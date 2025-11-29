@@ -77,7 +77,17 @@ public class Employee {
         this.payHistory.add(payStatement);
     }
 
+    public void printEmployeeDetails() {
+        System.out.println("Employee ID: " + empid);
+        System.out.println("Name: " + name);
+        System.out.println("SSN: " + SSN);
+        System.out.println("Salary: " + salary);
+        System.out.println("Job Title: " + jobTitle);
+        System.out.println("Division: " + division);
+    }
+    
 }
+
 
 
 
