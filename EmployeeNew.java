@@ -1,17 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeNew {
+public class Employee {
     private int empid;
     private String name;
     private String SSN;
     private double salary;
     private String jobTitle;
     private String division;
-    private List<PayStatementNew> payHistory;
+    private List<PayStatement> payHistory;
 
 
-    public EmployeeNew(int empid, String name, String SSN, double salary, String jobTitle, String division, List<PayStatementNew> payHistory){
+    public Employee(int empid, String name, String SSN, double salary, String jobTitle, String division, List<PayStatement> payHistory){
         this.empid = empid;
         this.name = name;
         this.SSN = SSN;
@@ -45,14 +45,14 @@ public class EmployeeNew {
         return division;
     }
 
-    public List<PayStatementNew> getPayHistory() {
+    public List<PayStatement> getPayHistory() {
         return payHistory;
     }
-
+    
     public void setEmpid(int empid) {
         this.empid = empid;
     }
-    
+
     public void setSalary(double salary) {
         this.salary = salary;
     }
@@ -73,7 +73,7 @@ public class EmployeeNew {
         this.division = division;
     }
 
-    public void addPayStatement(PayStatementNew payStatement) {
+    public void addPayStatement(PayStatement payStatement) {
         this.payHistory.add(payStatement);
     }
 
