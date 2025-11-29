@@ -2,9 +2,9 @@ import java.util.List;
 
 public interface IEmployeeRepository 
 {
-    List<EmployeeNew> getAllEmployees();
-    EmployeeNew searchEmployee(String criteria);
-    void updateEmployee(EmployeeNew employee);
-    void addEmployee(EmployeeNew employee);
+    List<Employee> getAllEmployees();
+    Employee searchEmployee(String criteria);
+    void updateEmployee(Employee employee);
+    void addEmployee(Employee employee);
     void deleteEmployee(int empID);
 }
