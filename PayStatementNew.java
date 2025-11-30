@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class PayStatementNew {
+public class PayStatement {
     private String month;
     private double amount;
 
-    public PayStatementNew(String month, double amount) {
+    public PayStatement(String month, double amount) {
         this.month = month;
         this.amount = amount;
     }
@@ -21,4 +21,5 @@ public class PayStatementNew {
     public void setAmount(double amount) {
         this.amount = amount;
     }
+
 }
