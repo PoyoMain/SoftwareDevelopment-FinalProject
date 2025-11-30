@@ -1,26 +1,31 @@
+import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeRepository implements IEmployeeRepository 
-{
-    List<EmployeeNew> employees;
+
+public class EmployeeRepository implements IEmployeeRepository {
+    private List<Employee> employees;
+
+    public EmployeeRepository() {
+        this.employees = new ArrayList<>();
+    }
 
     @Override
-    public List<EmployeeNew> getAllEmployees() {
+    public List<Employee> getAllEmployees() {
         return employees;
     }
 
     @Override
-    public EmployeeNew searchEmployee(String criteria) {
+    public Employee searchEmployee(String criteria) {
         Integer idCriteria = null;
 
         //Attempts to parse the criteria as an ID
         try {
             idCriteria = Integer.parseInt(criteria);
         } catch (NumberFormatException e) {
-            //Catches the parse if it isn't a number, skips the ID matching if that
+            //Catches the parse if it isn't a number, skips the ID matching if that is the case
         }
 
-        for (EmployeeNew emp : employees) {
+        for (Employee emp : employees) {
 
             //Matches by employee name
             if (emp.getName().equalsIgnoreCase(criteria)) {
@@ -48,8 +53,10 @@ public class EmployeeRepository implements IEmployeeRepository
         return null;
     }
 
+
+
     @Override
-    public void updateEmployee(EmployeeNew employee) {
+    public void updateEmployee(Employee employee) {
         for (int i = 0; i < employees.size(); i++) {
             if (employees.get(i).getEmpid() == employee.getEmpid()) {
                 employees.set(i, employee);
@@ -62,12 +69,12 @@ public class EmployeeRepository implements IEmployeeRepository
     }
 
     @Override
-    public void addEmployee(EmployeeNew employee) {
+    public void addEmployee(Employee employee) {
         employees.add(employee);
         System.out.println("Added Employee ID: " + employee.getEmpid());
     }
 
-   @Override
+    @Override
     public void deleteEmployee(int id) {
         boolean removed = employees.removeIf(emp -> emp.getEmpid() == id);
         if (removed) {
@@ -76,4 +83,5 @@ public class EmployeeRepository implements IEmployeeRepository
             System.out.println("Employee with ID " + id + " not found.");
         }
     }
-}
+
+
