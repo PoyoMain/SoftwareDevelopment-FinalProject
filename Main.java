@@ -17,7 +17,7 @@ public class Main {
             System.out.println("2. Delete Employee");
             System.out.println("3. Display All Employees");
             System.out.println("4. Increase Salaries Within Range");
-            System.out.println("5. Search Employee (Name / ID / SSN)");
+            System.out.println("5. Search For Employee By: Name, ID, or SSN");
             System.out.println("6. Update Employee Data (Name, Job, Division)");
             System.out.println("7. Exit");
             System.out.print("Choose an option: ");
@@ -182,7 +182,7 @@ public class Main {
                     valid = false;
 
                     do {
-                        System.out.print("Search by: 1=Name  2=ID  3=SSN\nYour choice: ");
+                        System.out.print("Search by: 1 = Name,  2 = ID,  3 = SSN\nYour choice: ");
                         String input = scanner.nextLine();
 
                         try {
@@ -217,7 +217,7 @@ public class Main {
 
                 //Updates employee data (Name, jobtitle, and/or division)
                 case 6:
-                    System.out.println("Update using: 1=Name  2=ID  3=SSN");
+                    System.out.println("Pick Employee To Update Using: 1 = Name,  2 = ID,  3 = SSN");
 
                     int method = -1;
                     valid = false;
@@ -264,13 +264,13 @@ public class Main {
                     }
 
                    
-                    System.out.print("Enter NEW Name (leave blank to keep): ");
+                    System.out.print("Enter NEW Name (leave blank to keep it the same): ");
                     String newName = scanner.nextLine();
 
-                    System.out.print("Enter NEW Job Title (leave blank to keep): ");
+                    System.out.print("Enter NEW Job Title (leave blank to keep it the same): ");
                     String newJob = scanner.nextLine();
 
-                    System.out.print("Enter NEW Division (leave blank to keep): ");
+                    System.out.print("Enter NEW Division (leave blank to keep it the same): ");
                     String newDivision = scanner.nextLine();
 
                     updateService.updateEmployeeData(
@@ -307,5 +307,6 @@ public class Main {
     }
 
 }
+
 
 
