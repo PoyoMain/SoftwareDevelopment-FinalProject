@@ -80,7 +80,7 @@ public class Main {
                 case 2: {
                     Employee found = null;
 
-                    // Loop until a valid employee is found
+                  
                     do {
                         System.out.print("Enter Employee ID, Name, or SSN to delete: ");
                         String criteria = scanner.nextLine();
@@ -98,7 +98,7 @@ public class Main {
 
                     } while (found == null);
 
-                    // Delete the employee using their ID
+            
                     service.deleteEmployee(found.getEmpid());
 
                     break;
@@ -128,7 +128,7 @@ public class Main {
                    double min = 0, max = 0, pct = 0;
                    boolean valid = false;
 
-                   // MIN salary
+                 
                    do {
                        System.out.print("Enter minimum salary: ");
                        String input = scanner.nextLine();
@@ -143,7 +143,7 @@ public class Main {
 
                    valid = false;
 
-                   // MAX salary
+                  
                    do {
                        System.out.print("Enter maximum salary: ");
                        String input = scanner.nextLine();
@@ -158,7 +158,7 @@ public class Main {
 
                    valid = false;
 
-                   // Percentage
+                  
                    do {
                        System.out.print("Enter percentage increase: ");
                        String input = scanner.nextLine();
@@ -171,7 +171,7 @@ public class Main {
                        }
                    } while (!valid);
 
-                   // Now call service
+                  
                    service.updateSalary(pct, min, max);
                    break;
 
@@ -241,7 +241,7 @@ public class Main {
 
                     String criteria = "";
 
-                    // Ask user for matching input depending on search method
+                    
                     if (method == 1) {
                         System.out.print("Enter Name: ");
                         criteria = scanner.nextLine();
@@ -263,7 +263,7 @@ public class Main {
                         break;
                     }
 
-                    // Optional updates
+                   
                     System.out.print("Enter NEW Name (leave blank to keep): ");
                     String newName = scanner.nextLine();
 
@@ -307,4 +307,5 @@ public class Main {
     }
 
 }
+
 
